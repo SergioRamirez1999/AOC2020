@@ -65,9 +65,7 @@ public class p2 {
 
                                                     System.out.println(id_passports);
         
-        Integer id_seat = id_passports.stream().skip(1)
-                                               .limit(id_passports.size()-2)
-                                               .filter(e -> !has_consecutive(id_passports, e))
+        Integer id_seat = id_passports.stream().filter(e -> !has_consecutive(id_passports, e))
                                                .findFirst()
                                                .get()+1;
 
